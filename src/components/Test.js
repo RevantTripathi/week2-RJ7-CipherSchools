@@ -1,4 +1,5 @@
 import React from 'react'
+import PropTypes from "prop-types";
 
 
 const Test = ({name, setName}) => {
@@ -10,27 +11,11 @@ const Test = ({name, setName}) => {
     );
   };
 
-// class Test extends Component{
-    
-//        state={ isLoggedIn : false};
-    
-//     render(){
-//         return (
-//      <div>
-//         {!this.state.isLoggedIn ? (
-//            <h1>You are not logged in </h1>
-//          ) : (
-//             <h1>Congratulation, you are logged in!</h1>
-//         )}
-//         <button onClick={(e) => this.setState({ isLoggedIn : true})}>
-//             Login
-//         </button>
-         
+  Test.propTypes ={
+    name: PropTypes.string,
+    setName: PropTypes.func,
+  };
 
-//        </div>
-//         );
-//      }
-    
-// }
+
 
 export default Test;

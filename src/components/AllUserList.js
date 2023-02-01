@@ -1,5 +1,5 @@
 import React, { useState } from 'react'
-import UserDetails from './UserDetails';
+import UserDetails from './UserDetails.js';
 import Test from './Test.js';
 
 const AllUserList = () =>{
@@ -27,12 +27,7 @@ let setStateName= (name )=> {
 }
     return(
         <div>
-        {/* <UserDetails user={allUsers[0]}/>
-        <UserDetails user={allUsers[1]}/>
-        <UserDetails user={allUsers[2]}/> */}
-        {/* {allUsers.map((user,index) => (
-            <UserDetails key={index} user={user} />
-        ))} */}
+        
         <Test name={state.name} setName={setStateName}/>
              {allUsers.map((user, index) => (
                  <UserDetails key={index} user={user}/>
