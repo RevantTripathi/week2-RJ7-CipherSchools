@@ -1,6 +1,6 @@
 import React, {useState} from 'react'
-
-
+import SumNumbers from './SumNumbers';
+import { Link, Outlet } from 'react-router-dom';
 
 const SignUpFormm = () => {
     const [state, setState] =useState({
@@ -19,12 +19,12 @@ const SignUpFormm = () => {
         <>
             <form onSubmit={(e) => {e.preventDefault();
 
-            if(isValidUser({firstName: state.firstName, lastName :state.lastName, email: state.email, password: state.password})){
-                console.log("User is valid");
-            }else{
-                setError("The User is invalid");
-                console.log("User is invalid");
-            }
+            // if(isValidUser({firstName: state.firstName, lastName :state.lastName, email: state.email, password: state.password})){
+            //     console.log("User is valid");
+            // }else{
+            //     setError("The User is invalid");
+            //     console.log("User is invalid");
+            // }
 
             }}>
             <label>First Name</label>
@@ -39,9 +39,11 @@ const SignUpFormm = () => {
             <input name={"password"} type={"password"} onChange={halndleChange} value= {state.password} placeholder={"password"} />
             <button type={"submit"}>Submit</button>
             <span style={"color:red"}>{error}</span>
+            <Link to={"sum"}>Sum Component</Link>
+            <Outlet/>
             </form>
         </>
     )
 }
 
-// export default SignUpFormm;
+export default SignUpFormm;

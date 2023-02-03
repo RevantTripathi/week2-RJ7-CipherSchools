@@ -1,5 +1,5 @@
 import React, { Component } from 'react'
-import { testAPI } from './testApi'
+import { testAPI } from '../apis/testApi'
 
 
 class SumNumbers extends Component {
